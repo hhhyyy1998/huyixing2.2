@@ -1,0 +1,80 @@
+{
+  "说明": [
+    "code2desc:返回服务器的算法请求信息，_cate不能删除，供推送程序识别",
+    "code2pyfile:配置对应编码开启的算法py文件",
+    "Ipc_code:推理设备编码",
+    "IPV4:配置服务开启的IP，如果不填写就默认获取本机ip",
+    "camera_ip:布控球地址,默认值为： rtsp://admin:hik12345@218.199.7.241:554/h264/ch1/main/av_stream",
+    "inter_ip_text：云平台的文字推送地址，默认值为：https://surveillance-api.whhyxkj.com/camera/api/violation-manage/upload/violation",
+    "inter_ip_img：云平台的图片推送地址，默认值为：https://surveillance-api.whhyxkj.com/camera/api/violation-manage/upload/file",
+    "ifcloud：是否推送到云平台，0表示否，1表示肯定，默认为0",
+    "ifshow：推理芯片连接显示屏之后是否显示推理过程，默认为0"
+  ],
+
+  "code2desc": [
+    {
+      "AlgCode": "1001",
+      "CodeDesc": "安全帽识别_hat"
+    },
+    {
+      "AlgCode": "1003",
+      "CodeDesc": "工作服识别_uniform"
+    },
+    {
+      "AlgCode": "3",
+      "CodeDesc": "抽烟识别_cigarette"
+    },
+    {
+      "AlgCode": "3002",
+      "CodeDesc": "火焰识别_fire"
+    },
+    {
+      "AlgCode": "3001",
+      "CodeDesc": "烟雾识别_smoke"
+    },
+    {
+      "AlgCode": "6",
+      "CodeDesc": "跨越围栏违章识别_fence"
+    },{
+      "AlgCode": "8",
+      "CodeDesc": "人员摔倒识别_upDown"
+    }
+  ],
+  "code2pyfile": [
+    {
+      "AlgCode": [
+        "1001",
+        "1003"
+      ],
+      "pyfile": "camera_hat.py"
+    },
+    {
+      "AlgCode": [
+        "3",
+        "3002",
+        "3001"
+      ],
+      "pyfile": "camera_fire.py"
+    },
+    {
+      "AlgCode": [
+        "6"
+      ],
+      "pyfile": "camera_fence.py"
+    },
+    {
+      "AlgCode": [
+        "8"
+      ],
+      "pyfile": "camera_upDown.py"
+    }
+  ],
+  "Ipc_code": "888",
+  "IPV4": "",
+  "inter_ip_text": "https://surveillance-api.whhyxkj.com/camera/api/violation-manage/upload/violation",
+  "inter_ip_img": "https://surveillance-api.whhyxkj.com/camera/api/violation-manage/upload/file",
+  "camera_ip": "rtsp://admin:hik12345@192.168.1.21:554/h264/ch1/main/av_stream",
+  "ifcloud": 0,
+  "ifshow": 1
+}
+
