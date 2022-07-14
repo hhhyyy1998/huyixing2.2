@@ -16,7 +16,7 @@ def ability_res(number, ai_ability):
             }
     }
 
-    return data
+    return json.dumps(data)
 
 def task_config_res(task_id):
     data = {
@@ -27,7 +27,7 @@ def task_config_res(task_id):
             "Desc": "success"
         }
     }
-    return data
+    return json.dumps(data)
 
 
 def config_fail_res(task_id,Desc='fail'):
@@ -39,7 +39,7 @@ def config_fail_res(task_id,Desc='fail'):
             "Desc": Desc
         }
     }
-    return data
+    return json.dumps(data)
 
 
 def task_request_res(task_number, task,Desc='success'):
@@ -52,4 +52,4 @@ def task_request_res(task_number, task,Desc='success'):
         "TaskNumber": task_number,
         "Task": task
     }
-    return data
+    return json.dumps(data)

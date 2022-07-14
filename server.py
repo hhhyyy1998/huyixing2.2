@@ -164,7 +164,7 @@ def everything():
                     print(request_data['DevCode'])
                     print(alg_stat)
                     if m==0:
-                        file=open('/home/firefly/huyixing2.2/tasks.txt','a')
+                        file=open('tasks.txt','a')
                         file.write(alg_code+'\n'+str(alarm_interval)+'\n'+alarm_pushUrl+'\n'+request_data['DevCode']+'\n\n')
                         file.close()
                 else:

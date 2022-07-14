@@ -116,11 +116,13 @@ class Check_fire:
                         cig_in_hand = True
                         break
             if cig_in_hand:
-                if self.err_count['cigarette'] >= 15:
+                if self.err_count['cigarette'] >= 5:
                     cv2.putText(image, 'cigarette!', (100, 300), cv2.FONT_ITALIC, 1, (255, 0, 0), 2)
                     self.threadPool.submit(self.sendRequest, image, cate2code['cigarette'], TaskId, cate2desc['cigarette'],
                                            gap, alarm_pushUrl, dev_code, 'cigarette')
                     self.err_count['cigarette'] = 0
                 else:
-                    if self.err_count['uniform'] > 0:
-                        self.err_count['cigarette'] -= 2
+                    self.err_count['cigarette']+=1
+            else:
+                if self.err_count['cigarette'] > 0:
+                    self.err_count['cigarette'] -= 2

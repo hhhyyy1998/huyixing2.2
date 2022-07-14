@@ -20,7 +20,7 @@ LISTSIZE = len(CLASSES) +5
 SPAN = 3
 NUM_CLS = len(CLASSES)
 MAX_BOXES = 500
-OBJ_THRESH = 0.25
+OBJ_THRESH = 0.08
 NMS_THRESH = 0.5
 
 def load_model(rknn_model_path):
